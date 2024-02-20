@@ -20,10 +20,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-        .navbar div, .navbar-nav {
-            display: flex;
-            align-items: center;
+            position: relative;
         }
         .social-icons a, .navbar-nav a {
             color: #fba947;
@@ -31,26 +28,23 @@
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        .social-icons a:last-child, .navbar-nav a:last-child {
-            margin-right: 0;
-        }
         .social-icons a:hover, .navbar-nav a:hover {
             color: #fff;
         }
         .navbar h1 {
-            position: absolute;
-            width: 100%;
-            left: 0;
-            text-align: center;
             margin: 0;
             font-size: 24px;
             color: #fba947;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
         }
         .hero {
             background-color: #16151B;
             padding: 50px 20px;
             text-align: center;
-            position: relative; /* Added */
+            position: relative;
         }
         .hero img {
             max-width: 100%;
@@ -69,8 +63,8 @@
             cursor: pointer;
             position: absolute;
             left: 50%;
-            transform: translateX(-50%); /* Center horizontally */
-            bottom: 30px; /* Adjust button distance from the bottom */
+            transform: translateX(-50%);
+            bottom: 30px;
         }
         .buy-button:hover {
             background-color: #fba947;
@@ -79,22 +73,46 @@
         .content {
             padding: 20px;
             display: flex;
-            justify-content: center; /* Center the content horizontally */
-            align-items: center; /* Center the content vertically */
-            flex-direction: column; /* Arrange content vertically */
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
-        .content p {
+        .content p, .disclaimer {
             max-width: 600px;
             margin: 20px auto;
             line-height: 1.6;
             color: #fba949;
-            text-align: center; /* Center align the paragraph text */
-        }
-        .disclaimer {
-            font-size: 12px;
             text-align: center;
-            color: #fba949;
-            margin-top: 20px;
+        }
+        .section {
+            margin: 50px 0;
+            text-align: center;
+        }
+        .section-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .tokenomics-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .tokenomics-item {
+            flex: 1 0 50%;
+            margin-bottom: 20px;
+        }
+        .tokenomics-item-header {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .tokenomics-item-content {
+            font-size: 16px;
         }
         .slider {
             background-color: #202027;
@@ -124,11 +142,22 @@
             0% { transform: translateX(0); }
             100% { transform: translateX(calc(-300px * 8)); }
         }
-        /* New style for the bottom image */
         .bottom-image {
             max-width: 100%;
             height: 500px;
-            margin-top: 10px; /* Adjust spacing from the paragraph */
+            margin-top: 10px;
+        }
+        .ca-marker {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fba947;
+            margin: 50px 0;
+        }
+        .tokenomics-image {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -136,8 +165,8 @@
 
 <div class="navbar">
     <div class="social-icons">
-        <a href="https://t.me/WELFtoken" target="_blank" rel="noreferrer"><i class="fa-brands fa-telegram"></i></a>
-        <a href="https://www.twitter.com/WELFtoken" target="_blank" rel="noreferrer"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://t.me/welfcoin" target="_blank" rel="noreferrer"><i class="fa-brands fa-telegram"></i></a>
+        <a href="https://www.twitter.com/welfcoin" target="_blank" rel="noreferrer"><i class="fa-brands fa-twitter"></i></a>
     </div>
     <h1>$WELF</h1>
     <div class="navbar-nav">
@@ -148,13 +177,12 @@
 
 <div class="hero">
     <img src="https://fuchsia-abstract-dragon-160.mypinata.cloud/ipfs/QmRqjmdhFHEdySotb9qsieaEuudD5MgjEZcFbK5pZrZiU7" alt="WELF The Woof of Solana">
-    <!-- BUY button added directly beneath the logo -->
-    <a href="YOUR_BUY_LINK_HERE" class="buy-button">BUY</a>
+    <a href="https://raydium.io" class="buy-button">BUY</a>
 </div>
 
 <div class="slider">
     <div class="slide-track">
-        <!-- Duplicate slides for a seamless loop -->
+        <!-- Ensure enough slides for a continuous loop -->
         <div class="slide">$WELF</div>
         <div class="slide">$WELF</div>
         <div class="slide">$WELF</div>
@@ -163,7 +191,7 @@
         <div class="slide">$WELF</div>
         <div class="slide">$WELF</div>
         <div class="slide">$WELF</div>
-        <!-- Start duplicating slides from here -->
+        <!-- Duplicate slides for seamless scrolling -->
         <div class="slide">$WELF</div>
         <div class="slide">$WELF</div>
         <div class="slide">$WELF</div>
@@ -176,12 +204,49 @@
 </div>
 
 <div class="content">
-    <p>$WELF - The Woof of Solana. Don't fade generational $WELF anon, its programmed to go higher.</p>
-    <!-- Image added below the paragraph -->
+    <p style="font-size: 18px; font-weight: bold;">CA: 0x570a5d26f7765ecb712c0924e4de545b89fd43df</p>
     <img src="https://fuchsia-abstract-dragon-160.mypinata.cloud/ipfs/QmdbPRYttGWfknfMKnBRwQhtoaw4ged5ryAP7T3Mcy1CWq" alt="Bottom Image" class="bottom-image">
-    <div class="disclaimer">
-        $WELF is a community-driven token with no formal team. Also, $WELF is a meme token with no intrinsic value or expectation of financial return. It is intended purely for entertainment purposes, and there is no guarantee that its value will increase over time. We advise that you only use your funds to engage with $WELF if you can afford to do so without incurring any financial harm, and we recommend consulting with a financial advisor before engaging with any cryptocurrency. The value of $WELF may fluctuate significantly, and we make no representation of its future performance.
-    </div>
+</div>
+
+<div class="section">
+    <div class="section-header">About $WELF</div>
+    <p>$WELF, the Bull Terrier, is the Woof of Solana. $WELF is for those who are working towards Generational $WELF. $WELF is the goodest boy on the Solana network; he works for his bags, he doesn't care about the price action because the fundamental analysis is within the name and valhalla is programmed. You hear many stories about how people have fumbled generational wealth, but that changes with $WELF, the Woof of Solana. Legends will be cemented in history by owning a piece of generational $WELF.</p>
+</div>
+
+<div class="section">
+    <div class="section-header">Tokenomics</div>
+    <img src="https://fuchsia-abstract-dragon-160.mypinata.cloud/ipfs/QmQAYkEwcdirketpAGqTUN7YSCVQ5yJSMnEMxKK7rD7e3W" alt="Tokenomics Image" class="tokenomics-image">
+    <ul class="tokenomics-list">
+        <li class="tokenomics-item">
+            <div class="tokenomics-item-header">Liquidity:</div>
+            <div class="tokenomics-item-content">85%</div>
+        </li>
+        <li class="tokenomics-item">
+            <div class="tokenomics-item-header">Marketing:</div>
+            <div class="tokenomics-item-content">5%</div>
+        </li>
+        <li class="tokenomics-item">
+            <div class="tokenomics-item-header">Partnerships:</div>
+            <div class="tokenomics-item-content">5%</div>
+        </li>
+        <li class="tokenomics-item">
+            <div class="tokenomics-item-header">CEX Listings:</div>
+            <div class="tokenomics-item-content">5%</div>
+        </li>
+        <li class="tokenomics-item">
+            <div class="tokenomics-item-header">LP:</div>
+            <div class="tokenomics-item-content">BURNED</div>
+        </li>
+        <li class="tokenomics-item">
+            <div class="tokenomics-item-header">MINT:</div>
+            <div class="tokenomics-item-content">REVOKED</div>
+        </li>
+    </ul>
+</div>
+
+<div class="disclaimer">
+    <h2 style="text-align: center;">Disclaimer</h2>
+    <p>$WELF is a community-driven token with no formal team. Also, $WELF is a meme token with no intrinsic value or expectation of financial return. It is intended purely for entertainment purposes, and there is no guarantee that its value will increase over time. We advise that you only use your funds to engage with $WELF if you can afford to do so without incurring any financial harm, and we recommend consulting with a financial advisor before engaging with any cryptocurrency. The value of $WELF may fluctuate significantly, and we make no representation of its future performance.</p>
 </div>
 
 </body>
