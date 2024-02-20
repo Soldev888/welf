@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELF - The Woof of Solana</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #100E17;
+            color: #fba947;
+        }
+        .navbar {
+            background-color: #202027;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar div, .navbar-nav {
+            display: flex;
+            align-items: center;
+        }
+        .social-icons a, .navbar-nav a {
+            color: #fba947;
+            margin-right: 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:last-child, .navbar-nav a:last-child {
+            margin-right: 0;
+        }
+        .social-icons a:hover, .navbar-nav a:hover {
+            color: #fff;
+        }
+        .navbar h1 {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            text-align: center;
+            margin: 0;
+            font-size: 24px;
+            color: #fba947;
+        }
+        .hero {
+            background-color: #16151B;
+            padding: 50px 20px;
+            text-align: center;
+            position: relative; /* Added */
+        }
+        .hero img {
+            max-width: 100%;
+            height: auto;
+        }
+        .buy-button {
+            display: inline-block;
+            background-color: #202027;
+            color: #fba947;
+            border: 2px solid #fba947;
+            padding: 20px 30px;
+            margin-top: 30px;
+            font-size: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%); /* Center horizontally */
+            bottom: 30px; /* Adjust button distance from the bottom */
+        }
+        .buy-button:hover {
+            background-color: #fba947;
+            color: #202027;
+        }
+        .content {
+            padding: 20px;
+            display: flex;
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+            flex-direction: column; /* Arrange content vertically */
+        }
+        .content p {
+            max-width: 600px;
+            margin: 20px auto;
+            line-height: 1.6;
+            color: #fba949;
+            text-align: center; /* Center align the paragraph text */
+        }
+        .disclaimer {
+            font-size: 12px;
+            text-align: center;
+            color: #fba949;
+            margin-top: 20px;
+        }
+        .slider {
+            background-color: #202027;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0;
+        }
+        .slide-track {
+            display: flex;
+            animation: scroll 15s linear infinite;
+        }
+        .slide {
+            flex-shrink: 0;
+            width: 300px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fba949;
+            font-size: 24px;
+            text-align: center;
+            margin-right: 2rem;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-300px * 8)); }
+        }
+        /* New style for the bottom image */
+        .bottom-image {
+            max-width: 100%;
+            height: 500px;
+            margin-top: 10px; /* Adjust spacing from the paragraph */
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="social-icons">
+        <a href="https://t.me/WELFtoken" target="_blank" rel="noreferrer"><i class="fa-brands fa-telegram"></i></a>
+        <a href="https://www.twitter.com/WELFtoken" target="_blank" rel="noreferrer"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+    <h1>$WELF</h1>
+    <div class="navbar-nav">
+        <a href="https://dexscreener.com" target="_blank" rel="noreferrer">Chart</a>
+        <a href="https://raydium.io" target="_blank" rel="noreferrer">Swap</a>
+    </div>
+</div>
+
+<div class="hero">
+    <img src="https://fuchsia-abstract-dragon-160.mypinata.cloud/ipfs/QmRqjmdhFHEdySotb9qsieaEuudD5MgjEZcFbK5pZrZiU7" alt="WELF The Woof of Solana">
+    <!-- BUY button added directly beneath the logo -->
+    <a href="YOUR_BUY_LINK_HERE" class="buy-button">BUY</a>
+</div>
+
+<div class="slider">
+    <div class="slide-track">
+        <!-- Duplicate slides for a seamless loop -->
+        <div class="slide">$WELF</div>
+        <div class="slide">$WELF</div>
+        <div class="slide">$WELF</div>
+        <div class="slide">$WELF</div>
+        <div class="slide">$WELF</div>
+        <div class="slide">$WELF</div>
+        <div class="slide">$WELF</div>
+        <div class="slide">$WELF</div>
+        <!-- Start duplicating slides from here -->
+        <div class="slide">$WELF</div>
+        <div class="slide">$WELF</div>
+        <div class="slide">$WELF</div>
+        <div class="slide">$WELF</div>
+        <div class="slide">$WELF</div>
+        <div class="slide">$WELF</div>
+        <div class="slide">$WELF</div>
+        <div class="slide">$WELF</div>
+    </div>
+</div>
+
+<div class="content">
+    <p>$WELF - The Woof of Solana. Don't fade generational $WELF anon, its programmed to go higher.</p>
+    <!-- Image added below the paragraph -->
+    <img src="https://fuchsia-abstract-dragon-160.mypinata.cloud/ipfs/QmdbPRYttGWfknfMKnBRwQhtoaw4ged5ryAP7T3Mcy1CWq" alt="Bottom Image" class="bottom-image">
+    <div class="disclaimer">
+        $WELF is a community-driven token with no formal team. Also, $WELF is a meme token with no intrinsic value or expectation of financial return. It is intended purely for entertainment purposes, and there is no guarantee that its value will increase over time. We advise that you only use your funds to engage with $WELF if you can afford to do so without incurring any financial harm, and we recommend consulting with a financial advisor before engaging with any cryptocurrency. The value of $WELF may fluctuate significantly, and we make no representation of its future performance.
+    </div>
+</div>
+
+</body>
+</html>
