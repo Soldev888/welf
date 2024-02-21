@@ -199,6 +199,22 @@
             top: 20px;
             color: #fba947;
         }
+
+        /* Adjustments for moving the tokenomics image up */
+        .tokenomics-image {
+            max-width: 100px; /* Adjust the maximum width to make the image smaller */
+            margin-top: -275px; /* Decrease the top margin to move the image up */
+            animation: rotateCoin 2s infinite linear; /* Add animation for rotating the image */
+        }
+
+        @keyframes rotateCoin {
+            0% {
+                transform: rotateY(0deg);
+            }
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
     </style>
 </head>
 <body>
@@ -248,9 +264,9 @@
     <img src="https://fuchsia-abstract-dragon-160.mypinata.cloud/ipfs/QmdbPRYttGWfknfMKnBRwQhtoaw4ged5ryAP7T3Mcy1CWq" alt="Bottom Image" class="bottom-image" style="width: 325px;">
 </div>
 
-<div class="section" style="text-align: center; max-width: 400px; margin: 0 auto;">
+<div class="section" style="text-align: center; max-width: 800px; margin: 0 auto;">
     <div class="section-header" style="margin-bottom: 20px;">About $WELF</div>
-    <p>$WELF, the Bull Terrier, is the Woof of Solana. $WELF is for those who are working towards Generational $WELF. $WELF is the goodest boy on the Solana network; he works for his bags, he doesn't care about the price action because the fundamental analysis is within the name and valhalla is programmed. You hear many stories about how people have fumbled generational wealth, but that changes with $WELF, the Woof of Solana. Legends will be cemented in history by owning a piece of generational $WELF.</p>
+    <p style="margin: 0 auto; padding: 0 20px; font-size: 16px; line-height: 1.8;">$WELF, the Bull Terrier, is the Woof of Solana. $WELF is for those who are working towards Generational $WELF. $WELF is the goodest boy on the Solana network; he works for his bags, he doesn't care about the price action because the fundamental analysis is within the name and valhalla is programmed. You hear many stories about how people have fumbled generational wealth, but that changes with $WELF, the Woof of Solana. Legends will be cemented in history by owning a piece of generational $WELF.</p>
 </div>
 
 <div class="section">
