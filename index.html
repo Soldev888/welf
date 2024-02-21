@@ -11,29 +11,34 @@
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: #100E17;
-            color: #fba947;
+            background-image: linear-gradient(to bottom, #14F195, #8D38C9);
+            color: #14F195;
             overflow-x: hidden;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
+
         .light-theme {
             background-color: #fff;
             color: #000;
         }
+
         .light-theme .navbar, .light-theme .buy-button {
             background-color: #f0f0f0;
             color: #000;
         }
+
         .light-theme .social-icons a, .light-theme .navbar-nav a, .light-theme .buy-button {
             color: #000;
         }
+
         .light-theme .buy-button:hover {
             background-color: #ddd;
             color: #000;
             border-color: #000;
         }
+
         .navbar {
-            background-color: #202027;
+            background-image: linear-gradient(to right, #3ae59e, #42bcbb);
             padding: 20px;
             display: flex;
             justify-content: space-between;
@@ -41,55 +46,63 @@
             position: relative;
             animation: fadeInDown 1s ease-out;
         }
+
         .social-icons a, .navbar-nav a {
-            color: #fba947;
-            margin-right: 15px; /* Increased margin */
+            color: #9945FF;
+            margin-right: 15px;
             text-decoration: none;
             transition: color 0.3s ease;
         }
+
         .social-icons a:hover, .navbar-nav a:hover {
             color: #fff;
         }
+
         .navbar h1 {
             margin: 0;
             font-size: 24px;
-            color: #fba947;
+            color: #9945FF;
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
         }
+
         .hero {
-            background-color: #16151B;
+            background-image: linear-gradient(#9945FF, #14F195);
             padding: 50px 20px;
             text-align: center;
             position: relative;
         }
+
         .hero img {
             max-width: 100%;
             height: auto;
         }
+
         .buy-button {
             display: inline-block;
-            background-color: #202027;
-            color: #fba947;
-            border: 2px solid #fba947;
-            padding: 20px 30px;
-            margin-top: 30px;
-            font-size: 30px;
+            background: linear-gradient(to right, #8b5ff3, #47aebf);
+            color: #14F195;
+            border: 2px solid #14F195;
+            padding: 15px 25px;
+            margin-top: 10px;
+            font-size: 18px;
             text-decoration: none;
             transition: all 0.3s ease;
             cursor: pointer;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            bottom: 30px; /* Adjusted for better positioning */
+            bottom: 15px;
             animation: pulse 2s infinite;
         }
+
         .buy-button:hover {
-            background-color: #fba947;
-            color: #202027;
+            background: linear-gradient(to right, #8b5ff3, #47aebf);
+            color: #14F195;
         }
+
         .content {
             padding: 20px;
             display: flex;
@@ -97,22 +110,26 @@
             align-items: center;
             flex-direction: column;
         }
+
         .content p, .disclaimer {
             max-width: 600px;
             margin: 20px auto;
             line-height: 1.6;
-            color: #fba949;
+            color: #14F195;
             text-align: center;
         }
+
         .section {
             margin: 50px 0;
             text-align: center;
         }
+
         .section-header {
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 20px;
         }
+
         .tokenomics-list {
             list-style: none;
             padding: 0;
@@ -122,55 +139,67 @@
             align-items: center;
             flex-wrap: wrap;
         }
+
         .tokenomics-item {
             flex: 1 0 50%;
             margin-bottom: 20px;
             transition: transform 0.3s ease;
         }
+
         .tokenomics-item:hover {
             transform: scale(1.1);
         }
+
         .tokenomics-item-header {
             font-size: 18px;
             font-weight: bold;
             margin-bottom: 10px;
         }
+
         .tokenomics-item-content {
             font-size: 16px;
         }
+
         @keyframes fadeInDown {
             from {
                 opacity: 0;
                 transform: translateY(-20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
         @keyframes pulse {
             0% {
                 transform: scale(1) translateX(-50%);
             }
+
             50% {
                 transform: scale(1.05) translateX(-50%);
             }
+
             100% {
                 transform: scale(1) translateX(-50%);
             }
         }
+
         .slider {
-            background-color: #202027;
+            background: linear-gradient(to right, #8b5ff3, #47aebf);
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px 0;
+            padding: 15px 0;
         }
+
         .slide-track {
             display: flex;
-            animation: scroll 15s linear infinite;
+            animation: scroll 10s linear infinite;
         }
+
         .slide {
             flex-shrink: 0;
             width: 300px;
@@ -178,39 +207,48 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #fba949;
+            color: #14F195;
             font-size: 24px;
             text-align: center;
             margin-right: 2rem;
         }
+
         @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-300px * 8)); }
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-300px * 8));
+            }
         }
+
         .copy-icon {
             margin-left: 5px;
             cursor: pointer;
-            color: #fba949;
+            color: #9945FF;
         }
+
         .theme-switch {
             cursor: pointer;
             position: absolute;
             right: 20px;
             top: 20px;
-            color: #fba947;
+            color: #9945FF;
         }
 
         /* Adjustments for moving the tokenomics image up */
         .tokenomics-image {
-            max-width: 100px; /* Adjust the maximum width to make the image smaller */
-            margin-top: -275px; /* Decrease the top margin to move the image up */
-            animation: rotateCoin 2s infinite linear; /* Add animation for rotating the image */
+            max-width: 250px !important;
+            margin-top: -200px;
+            animation: rotateCoin 2s infinite linear;
         }
 
         @keyframes rotateCoin {
             0% {
                 transform: rotateY(0deg);
             }
+
             100% {
                 transform: rotateY(360deg);
             }
@@ -233,7 +271,7 @@
 </div>
 
 <div class="hero">
-    <img src="https://fuchsia-abstract-dragon-160.mypinata.cloud/ipfs/QmRqjmdhFHEdySotb9qsieaEuudD5MgjEZcFbK5pZrZiU7" alt="WELF The Woof of Solana" style="max-width: 50%; height: auto;">
+    <img src="https://yellow-characteristic-bandicoot-833.mypinata.cloud/ipfs/QmfUXpnGe7y6pVyo72DMLCr7cVWCPxHiBr7gDVV6X8cacR" style="max-width: 50%; height: auto;">
     <a href="https://raydium.io" class="buy-button">BUY</a>
 </div>
 
@@ -260,8 +298,8 @@
 </div>
 
 <div class="content">
-    <p style="font-size: 18px; font-weight: bold;">CA: 0x570a5d26f7765ecb712c0924e4de545b89fd43df<span class="copy-icon" onclick="copyToClipboard('0x570a5d26f7765ecb712c0924e4de545b89fd43df')"><i class="fas fa-copy"></i></span></p>
-    <img src="https://fuchsia-abstract-dragon-160.mypinata.cloud/ipfs/QmdbPRYttGWfknfMKnBRwQhtoaw4ged5ryAP7T3Mcy1CWq" alt="Bottom Image" class="bottom-image" style="width: 325px;">
+    <p style="font-size: 18px; font-weight: bold; color: #9945FF;">CA: 0x570a5d26f7765ecb712c0924e4de545b89fd43df<span class="copy-icon" onclick="copyToClipboard('0x570a5d26f7765ecb712c0924e4de545b89fd43df')"><i class="fas fa-copy"></i></span></p>
+    <img src="https://yellow-characteristic-bandicoot-833.mypinata.cloud/ipfs/QmWZ3bkpvH4LtysPg1NZn32ne6drvVa4c7Uv6E6Xt7RcVa" alt="Bottom Image" class="bottom-image" style="width: 325px;">
 </div>
 
 <div class="section" style="text-align: center; max-width: 800px; margin: 0 auto;">
@@ -297,7 +335,7 @@
             <div class="tokenomics-item-content">REVOKED</div>
         </li>
     </ul>
-    <img src="https://fuchsia-abstract-dragon-160.mypinata.cloud/ipfs/QmQAYkEwcdirketpAGqTUN7YSCVQ5yJSMnEMxKK7rD7e3W" alt="Tokenomics Image" class="tokenomics-image" style="max-width: 50%; height: auto;">
+    <img src="https://yellow-characteristic-bandicoot-833.mypinata.cloud/ipfs/QmUGGcbDrcH9wenRTZeHMdxm5Rirht111D1Auw4CxqAJAP" alt="Tokenomics Image" class="tokenomics-image" style="max-width: 50%; height: auto;">
 </div>
 
 <div class="disclaimer">
