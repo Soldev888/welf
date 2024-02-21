@@ -10,9 +10,27 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             background-color: #100E17;
             color: #fba947;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .light-theme {
+            background-color: #fff;
+            color: #000;
+        }
+        .light-theme .navbar, .light-theme .buy-button {
+            background-color: #f0f0f0;
+            color: #000;
+        }
+        .light-theme .social-icons a, .light-theme .navbar-nav a, .light-theme .buy-button {
+            color: #000;
+        }
+        .light-theme .buy-button:hover {
+            background-color: #ddd;
+            color: #000;
+            border-color: #000;
         }
         .navbar {
             background-color: #202027;
@@ -21,10 +39,11 @@
             justify-content: space-between;
             align-items: center;
             position: relative;
+            animation: fadeInDown 1s ease-out;
         }
         .social-icons a, .navbar-nav a {
             color: #fba947;
-            margin-right: 10px;
+            margin-right: 15px; /* Increased margin */
             text-decoration: none;
             transition: color 0.3s ease;
         }
@@ -64,7 +83,8 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            bottom: 30px;
+            bottom: 30px; /* Adjusted for better positioning */
+            animation: pulse 2s infinite;
         }
         .buy-button:hover {
             background-color: #fba947;
@@ -105,6 +125,10 @@
         .tokenomics-item {
             flex: 1 0 50%;
             margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .tokenomics-item:hover {
+            transform: scale(1.1);
         }
         .tokenomics-item-header {
             font-size: 18px;
@@ -113,6 +137,27 @@
         }
         .tokenomics-item-content {
             font-size: 16px;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1) translateX(-50%);
+            }
+            50% {
+                transform: scale(1.05) translateX(-50%);
+            }
+            100% {
+                transform: scale(1) translateX(-50%);
+            }
         }
         .slider {
             background-color: #202027;
@@ -142,22 +187,17 @@
             0% { transform: translateX(0); }
             100% { transform: translateX(calc(-300px * 8)); }
         }
-        .bottom-image {
-            max-width: 100%;
-            height: 500px;
-            margin-top: 10px;
+        .copy-icon {
+            margin-left: 5px;
+            cursor: pointer;
+            color: #fba949;
         }
-        .ca-marker {
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
+        .theme-switch {
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 20px;
             color: #fba947;
-            margin: 50px 0;
-        }
-        .tokenomics-image {
-            max-width: 100%;
-            height: auto;
-            margin: 20px 0;
         }
     </style>
 </head>
@@ -168,21 +208,21 @@
         <a href="https://t.me/welfcoin" target="_blank" rel="noreferrer"><i class="fa-brands fa-telegram"></i></a>
         <a href="https://www.twitter.com/welfcoin" target="_blank" rel="noreferrer"><i class="fa-brands fa-twitter"></i></a>
     </div>
-    <h1>$WELF</h1>
-    <div class="navbar-nav">
+    <h1>GEN $WELF</h1>
+    <div class="navbar-nav" style="position: absolute; right: 50px;">
         <a href="https://dexscreener.com" target="_blank" rel="noreferrer">Chart</a>
         <a href="https://raydium.io" target="_blank" rel="noreferrer">Swap</a>
     </div>
+    <i class="fas fa-adjust theme-switch"></i>
 </div>
 
 <div class="hero">
-    <img src="https://fuchsia-abstract-dragon-160.mypinata.cloud/ipfs/QmRqjmdhFHEdySotb9qsieaEuudD5MgjEZcFbK5pZrZiU7" alt="WELF The Woof of Solana">
+    <img src="https://fuchsia-abstract-dragon-160.mypinata.cloud/ipfs/QmRqjmdhFHEdySotb9qsieaEuudD5MgjEZcFbK5pZrZiU7" alt="WELF The Woof of Solana" style="max-width: 50%; height: auto;">
     <a href="https://raydium.io" class="buy-button">BUY</a>
 </div>
 
 <div class="slider">
     <div class="slide-track">
-        <!-- Ensure enough slides for a continuous loop -->
         <div class="slide">$WELF</div>
         <div class="slide">$WELF</div>
         <div class="slide">$WELF</div>
@@ -204,18 +244,17 @@
 </div>
 
 <div class="content">
-    <p style="font-size: 18px; font-weight: bold;">CA: 0x570a5d26f7765ecb712c0924e4de545b89fd43df</p>
-    <img src="https://fuchsia-abstract-dragon-160.mypinata.cloud/ipfs/QmdbPRYttGWfknfMKnBRwQhtoaw4ged5ryAP7T3Mcy1CWq" alt="Bottom Image" class="bottom-image">
+    <p style="font-size: 18px; font-weight: bold;">CA: 0x570a5d26f7765ecb712c0924e4de545b89fd43df<span class="copy-icon" onclick="copyToClipboard('0x570a5d26f7765ecb712c0924e4de545b89fd43df')"><i class="fas fa-copy"></i></span></p>
+    <img src="https://fuchsia-abstract-dragon-160.mypinata.cloud/ipfs/QmdbPRYttGWfknfMKnBRwQhtoaw4ged5ryAP7T3Mcy1CWq" alt="Bottom Image" class="bottom-image" style="width: 325px;">
 </div>
 
-<div class="section">
-    <div class="section-header">About $WELF</div>
+<div class="section" style="text-align: center; max-width: 400px; margin: 0 auto;">
+    <div class="section-header" style="margin-bottom: 20px;">About $WELF</div>
     <p>$WELF, the Bull Terrier, is the Woof of Solana. $WELF is for those who are working towards Generational $WELF. $WELF is the goodest boy on the Solana network; he works for his bags, he doesn't care about the price action because the fundamental analysis is within the name and valhalla is programmed. You hear many stories about how people have fumbled generational wealth, but that changes with $WELF, the Woof of Solana. Legends will be cemented in history by owning a piece of generational $WELF.</p>
 </div>
 
 <div class="section">
     <div class="section-header">Tokenomics</div>
-    <img src="https://fuchsia-abstract-dragon-160.mypinata.cloud/ipfs/QmQAYkEwcdirketpAGqTUN7YSCVQ5yJSMnEMxKK7rD7e3W" alt="Tokenomics Image" class="tokenomics-image">
     <ul class="tokenomics-list">
         <li class="tokenomics-item">
             <div class="tokenomics-item-header">Liquidity:</div>
@@ -242,12 +281,27 @@
             <div class="tokenomics-item-content">REVOKED</div>
         </li>
     </ul>
+    <img src="https://fuchsia-abstract-dragon-160.mypinata.cloud/ipfs/QmQAYkEwcdirketpAGqTUN7YSCVQ5yJSMnEMxKK7rD7e3W" alt="Tokenomics Image" class="tokenomics-image" style="max-width: 50%; height: auto;">
 </div>
 
 <div class="disclaimer">
     <h2 style="text-align: center;">Disclaimer</h2>
     <p>$WELF is a community-driven token with no formal team. Also, $WELF is a meme token with no intrinsic value or expectation of financial return. It is intended purely for entertainment purposes, and there is no guarantee that its value will increase over time. We advise that you only use your funds to engage with $WELF if you can afford to do so without incurring any financial harm, and we recommend consulting with a financial advisor before engaging with any cryptocurrency. The value of $WELF may fluctuate significantly, and we make no representation of its future performance.</p>
 </div>
+
+<script>
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(function() {
+            alert('Address copied to clipboard!');
+        }, function(err) {
+            alert('Error in copying text: ' + err);
+        });
+    }
+    
+    document.querySelector('.theme-switch').addEventListener('click', function() {
+        document.body.classList.toggle('light-theme');
+    });
+</script>
 
 </body>
 </html>
