@@ -43,6 +43,7 @@
             justify-content: space-between;
             align-items: center;
             position: relative;
+            animation: fadeInDown 1s ease-out;
         }
 
         .social-icons a, .navbar-nav a {
@@ -60,13 +61,10 @@
             margin: 0;
             font-size: 24px;
             color: #9945FF;
-            text-align: center;
-        }
-
-        .navbar-nav {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
         }
 
         .hero {
@@ -113,7 +111,7 @@
         }
 
         .content p, .disclaimer {
-            max-width: 600px;
+            max-width: 90%; /* Adjusted for better mobile layout */
             margin: 20px auto;
             line-height: 1.6;
             color: #14F195;
@@ -161,6 +159,18 @@
             font-size: 16px;
         }
 
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         @keyframes pulse {
             0% {
                 transform: scale(1) translateX(-50%);
@@ -182,6 +192,8 @@
             align-items: center;
             justify-content: center;
             padding: 15px 0;
+            overflow-x: auto; /* Adjusted for better mobile layout */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
         }
 
         .slide-track {
@@ -242,19 +254,6 @@
                 transform: rotateY(360deg);
             }
         }
-
-        @media screen and (max-width: 768px) {
-            .navbar h1 {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
-
-            .navbar-nav {
-                display: none;
-            }
-        }
     </style>
 </head>
 <body>
@@ -265,15 +264,14 @@
         <a href="https://www.twitter.com/welfcoin" target="_blank" rel="noreferrer"><i class="fa-brands fa-twitter"></i></a>
     </div>
     <h1>GEN $WELF</h1>
-    <div class="navbar-nav">
+    <div class="navbar-nav" style="position: absolute; right: 50px;">
         <a href="https://dexscreener.com" target="_blank" rel="noreferrer">Chart</a>
-        <a href="https://raydium.io" target="_blank" rel="noreferrer">Swap</a>
     </div>
     <i class="fas fa-adjust theme-switch"></i>
 </div>
 
 <div class="hero">
-    <img src="https://yellow-characteristic-bandicoot-833.mypinata.cloud/ipfs/QmfUXpnGe7y6pVyo72DMLCr7cVWCPxHiBr7gDVV6X8cacR" style="max-width: 50%; height: auto;">
+    <img src="https://yellow-characteristic-bandicoot-833.mypinata.cloud/ipfs/QmfUXpnGe7y6pVyo72DMLCr7cVWCPxHiBr7gDVV6X8cacR" style="max-width: 90%; height: auto;">
     <a href="https://raydium.io" class="buy-button">BUY</a>
 </div>
 
@@ -301,10 +299,10 @@
 
 <div class="content">
     <p style="font-size: 18px; font-weight: bold; color: #9945FF;">CA: 0x570a5d26f7765ecb712c0924e4de545b89fd43df<span class="copy-icon" onclick="copyToClipboard('0x570a5d26f7765ecb712c0924e4de545b89fd43df')"><i class="fas fa-copy"></i></span></p>
-    <img src="https://yellow-characteristic-bandicoot-833.mypinata.cloud/ipfs/QmWZ3bkpvH4LtysPg1NZn32ne6drvVa4c7Uv6E6Xt7RcVa" alt="Bottom Image" class="bottom-image" style="width: 325px;">
+    <img src="https://yellow-characteristic-bandicoot-833.mypinata.cloud/ipfs/QmWZ3bkpvH4LtysPg1NZn32ne6drvVa4c7Uv6E6Xt7RcVa" alt="Bottom Image" class="bottom-image" style="width: 90%; max-width: 400px; margin-top: 20px;">
 </div>
 
-<div class="section" style="text-align: center; max-width: 800px; margin: 0 auto;">
+<div class="section" style="text-align: center; max-width: 90%; margin: 0 auto;">
     <div class="section-header" style="margin-bottom: 20px;">About $WELF</div>
     <p style="margin: 0 auto; padding: 0 20px; font-size: 16px; line-height: 1.8;">$WELF, the Bull Terrier, is the Woof of Solana. $WELF is for those who are working towards Generational $WELF. $WELF is the goodest boy on the Solana network; he works for his bags, he doesn't care about the price action because the fundamental analysis is within the name and valhalla is programmed. You hear many stories about how people have fumbled generational wealth, but that changes with $WELF, the Woof of Solana. Legends will be cemented in history by owning a piece of generational $WELF.</p>
 </div>
@@ -337,10 +335,10 @@
             <div class="tokenomics-item-content">REVOKED</div>
         </li>
     </ul>
-    <img src="https://yellow-characteristic-bandicoot-833.mypinata.cloud/ipfs/QmUGGcbDrcH9wenRTZeHMdxm5Rirht111D1Auw4CxqAJAP" alt="Tokenomics Image" class="tokenomics-image" style="max-width: 50%; height: auto;">
+    <img src="https://yellow-characteristic-bandicoot-833.mypinata.cloud/ipfs/QmUGGcbDrcH9wenRTZeHMdxm5Rirht111D1Auw4CxqAJAP" alt="Tokenomics Image" class="tokenomics-image" style="max-width: 90%; width: 400px; height: auto; margin-top: 20px;">
 </div>
 
-<div class="disclaimer">
+<div class="disclaimer" style="max-width: 90%; margin: 0 auto;">
     <h2 style="text-align: center;">Disclaimer</h2>
     <p>$WELF is a community-driven token with no formal team. Also, $WELF is a meme token with no intrinsic value or expectation of financial return. It is intended purely for entertainment purposes, and there is no guarantee that its value will increase over time. We advise that you only use your funds to engage with $WELF if you can afford to do so without incurring any financial harm, and we recommend consulting with a financial advisor before engaging with any cryptocurrency. The value of $WELF may fluctuate significantly, and we make no representation of its future performance.</p>
 </div>
