@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WELF - The Woof of Solana</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -44,7 +43,6 @@
             justify-content: space-between;
             align-items: center;
             position: relative;
-            animation: fadeInDown 1s ease-out;
         }
 
         .social-icons a, .navbar-nav a {
@@ -62,19 +60,13 @@
             margin: 0;
             font-size: 24px;
             color: #9945FF;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
+            text-align: center;
         }
 
         .navbar-nav {
-            position: absolute;
-            right: 120px;
-        }
-
-        .navbar-nav a {
-            margin-left: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .hero {
@@ -169,18 +161,6 @@
             font-size: 16px;
         }
 
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         @keyframes pulse {
             0% {
                 transform: scale(1) translateX(-50%);
@@ -263,17 +243,16 @@
             }
         }
 
-        /* Media query for smaller screens */
         @media screen and (max-width: 768px) {
             .navbar h1 {
-                left: 20px;
-                top: 20px;
-                transform: none;
-                position: static;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
             }
+
             .navbar-nav {
-                position: static;
-                margin-right: 20px;
+                display: none;
             }
         }
     </style>
